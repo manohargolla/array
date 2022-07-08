@@ -56,7 +56,7 @@ import monocept.Account;
 
 public class Accounttest {
 		public static void main(String[]args) {
-		        Account accountarray=new Account[3];
+		        Account accountarray[]=new Account[3];
 			Account a1= new Account(3892,"manu",1000.00);
 			
 			Account a2= new Account(3894,"loki",1000.00);
