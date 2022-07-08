@@ -1,0 +1,63 @@
+package monocept;
+import java.util.UUID;
+
+public class Customer {
+		private	String id;
+		private	String name;
+		private	int credits;
+		
+		
+		
+		public Customer( String name, int credits) {
+			this.id = generateID();
+			this.name = name;
+			this.credits = credits;
+		}
+
+
+
+		private String generateID() {
+			String uuid=UUID.randomUUID().toString();
+			return uuid;
+		}
+
+
+
+		public String getId() {
+			return id;
+		}
+
+
+
+		public String getName() {
+			return name;
+		}
+
+
+
+		public int getCredits() {
+			return credits;
+		}
+			
+		
+}
+-----------------------------------------------------
+
+
+package monocept.model;
+
+import monocept.Customer;
+
+public class Idtest {
+		public static void main(String []args) {
+			
+			Customer c1= new Customer("manu", 100);
+			System.out.println(c1.getId());
+			System.out.println(c1.getName());
+			System.out.println(c1.getCredits());
+	
+			
+		}
+}
+
+
