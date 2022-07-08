@@ -1,0 +1,81 @@
+package monocept;
+
+public class Account {
+		private int accNumber;
+		private String name;
+		private double balance;
+		
+		
+		public Account(int accNumber, String name, double balance) {
+			this.accNumber = accNumber;
+			this.name = name;
+			this.balance = balance;
+		}
+
+
+		public int getAccNumber() {
+			return accNumber;
+		}
+
+
+		public String getName() {
+			return name;
+		}
+
+
+		public double getBalance() {
+			return balance;
+		}
+		
+		private double deposit(double amount) {
+			 balance=balance+amount;
+			 return balance;
+			
+		}
+		public  double withdrawal(double amount) {
+		     balance = balance-amount;
+		     return balance;
+			
+		}
+		public double getMaxBalanceAccount(Account[] accounts) {
+			int length=accounts.length;
+			double max=accounts[0].balance;
+			for (int i=0;i<length;i++) {
+				if(accounts[i].balance>max){max=accounts[i].balance;}
+				
+			}
+			return max;
+		}
+		
+}
+
+
+package monocept.model;
+
+import monocept.Account;
+
+public class Accounttest {
+		public static void main(String[]args) {
+		        Account accountarray=new Account[3];
+			Account a1= new Account(3892,"manu",1000.00);
+			
+			Account a2= new Account(3894,"loki",1000.00);
+			
+			Account a3= new Account(3893,"variant",1000.00);
+			accountarray[0]=a1;
+			accountarray[1]=a2;
+			accountarray[2]=a3;
+			double maxbalance=a1.getMaxBalanceAccount(accountarray);
+			System.out.println(maxbalance);
+			double bal=a1.withdrawal(500.00);
+			System.out.println(bal);
+			
+			
+			
+			
+			
+			
+			
+			
+		}
+}
