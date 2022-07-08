@@ -56,11 +56,22 @@ import monocept.Account;
 
 public class Accounttest {
 		public static void main(String[]args) {
+		        Account accountarray=new Account[3];
 			Account a1= new Account(3892,"manu",1000.00);
 			
 			Account a2= new Account(3894,"loki",1000.00);
 			
 			Account a3= new Account(3893,"variant",1000.00);
+			accountarray[0]=a1;
+			accountarray[1]=a2;
+			accountarray[2]=a3;
+			double maxbalance=a1.getMaxBalanceAccount(accountarray);
+			System.out.println(maxbalance);
+			double bal=a1.withdrawal(500.00);
+			System.out.println(bal);
+			
+			
+			
 			
 			
 			
